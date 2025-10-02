@@ -88,18 +88,6 @@ def inject_next_match():
         "days_left": days_left,
     }
 
-
-@app.route("/", methods=["GET"])
-def index():
-    data = {}
-    for level in LEVELS:
-        players = fetch_players(level)
-        full_groups, forming_group = split_groups(players)
-        data[level] = {"full": full_groups, "forming": forming_group}
-    return render_template("index.html", data=data, levels=LEVELS)
-
-
-
 @app.route("/join", methods=["POST"])
 def join():
     first = request.form.get("first_name", "").strip()
