@@ -1,0 +1,28 @@
+<!-- static/img/padel-logo.svg -->
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Padel logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7aa2ff"/>
+      <stop offset="1" stop-color="#55d3a6"/>
+    </linearGradient>
+  </defs>
+  <!-- Racket head -->
+  <ellipse cx="56" cy="46" rx="32" ry="40" fill="url(#g)" />
+  <!-- Perforation holes -->
+  <g fill="rgba(0,0,0,0.35)">
+    <circle cx="45" cy="30" r="3"/><circle cx="56" cy="28" r="3"/><circle cx="67" cy="30" r="3"/>
+    <circle cx="40" cy="41" r="3"/><circle cx="52" cy="40" r="3"/><circle cx="63" cy="41" r="3"/><circle cx="74" cy="41" r="3"/>
+    <circle cx="45" cy="52" r="3"/><circle cx="56" cy="52" r="3"/><circle cx="67" cy="52" r="3"/>
+    <circle cx="52" cy="63" r="3"/><circle cx="63" cy="63" r="3"/>
+  </g>
+  <!-- Handle -->
+  <rect x="50" y="76" width="12" height="28" rx="6" fill="#1b2130"/>
+  <rect x="50" y="86" width="12" height="18" rx="6" fill="#0f1420" />
+  <!-- Grip wrap accents -->
+  <rect x="50" y="86" width="12" height="2" fill="#2a3348"/>
+  <rect x="50" y="92" width="12" height="2" fill="#2a3348"/>
+  <rect x="50" y="98" width="12" height="2" fill="#2a3348"/>
+  <!-- Ball -->
+  <circle cx="92" cy="36" r="12" fill="#dff66b"/>
+  <path d="M84,36c6,0,8,6,16,6" stroke="#a6bf42" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

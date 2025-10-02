@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="card">
+  <h2>Thanks, {{ player }}!</h2>
+  {% if level == 'for-fun' %}
+    <p>You joined the <strong>For-Fun</strong> queue.</p>
+  {% else %}
+    <p>You joined the <strong>{{ level|capitalize }}</strong> queue.</p>
+  {% endif %}
+
+  <div class="group-card">
+    <h4>Group {{ group_num }} {% if not is_full %}(forming){% endif %}</h4>
+    <ol>
+      {% for p in group_members %}
+        <li>{{ p.name }}</li>
+      {% endfor %}
+    </ol>
+    {% if not is_full %}
+      <p class="muted">We’ll add {{ 4 - group_members|length }} more player(s) when they join.</p>
+    {% else %}
+      <p class="success">Your group is complete!</p>
+    {% endif %}
+  </div>
+
+  <p><a class="link" href="{{ url_for('index') }}">← Back to homepage</a></p>
+</section>
+{% endblock %}

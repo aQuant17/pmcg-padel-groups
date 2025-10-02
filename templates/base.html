@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Padel Groups</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css', v=6) }}">
+  <!-- Optional: favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/padel-logo.svg') }}" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="logo pmcg" src="{{ url_for('static', filename='img/pmcg-logo-512.png') }}" alt="PMCG">
+        <span class="divider">×</span>
+        <img class="logo padel" src="{{ url_for('static', filename='img/padel-logo.svg') }}" alt="Padel" />
+        <h1 class="title">Padel Groups</h1>
+      </div>
+      <nav class="top-nav">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="#levels">Groups</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© {{ 2025 }} PMCG · Padel Groups</small>
+    </div>
+  </footer>
+</body>
+</html>
